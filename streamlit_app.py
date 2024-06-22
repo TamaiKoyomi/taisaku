@@ -9,9 +9,9 @@ st.title('期末テスト対策問題')
 def load_data():
     return pd.read_excel("期末.xlsx")
 
-st.write('家庭科、保健、歴史総合、生物の4教科をランダムで出題します。問題文が変だったらすみません。')
-
 words_df = load_data()
+
+st.write('家庭科、保健、歴史総合、生物の4教科をランダムで出題します。問題文が変だったらすみません。')
 
 if st.button('問題を見る'):
     rarity_probs = {
