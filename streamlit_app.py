@@ -7,7 +7,7 @@ st.title('期末テスト対策問題')
 # Load the data
 @st.cache
 def load_data():
-    return pd.read_excel("kimatu1-1.xlsx")
+    return pd.read_excel("期末.xlsx")
 
 words_df = load_data()
 
