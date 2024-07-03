@@ -11,7 +11,7 @@ def load_data():
 
 words_df = load_data()
 
-st.write('家庭科、保健、歴史総合、生物の4教科からランダムで出題します。問題文が変だったらすみません。')
+st.write('家庭科、保健、歴史総合、生物の4教科からランダムで出題します。')
 
 if st.button('問題を見る'):
     rarity_probs = {
