@@ -20,7 +20,7 @@ b = st.number_input('b' , placeholder = 'bの値を入力してください')
 #素数ならTrue,合成数ならFalseを返す
 x = factorize(3 * a + 2 * b)
 
-st.write(int(math.gcd(a , b)))
+st.write(math.gcd(int(a) , int(b)))
 
 #a,bの条件の確認および例外処理
 #if math.gcd(a , b) != 1 or a != 0 and a % 2 == 0 or b != 0 and b % 3 == 0 or a % 5 == b % 5 and a != 1 and b != 1:
