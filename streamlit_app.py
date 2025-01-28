@@ -25,5 +25,5 @@ if math.gcd(int(a) , int(b)) != 1 or a != 0 and a % 2 == 0 or b != 0 and b % 3 =
     x = False
 
 st.subheader('factorize:' + str(x))
-st.subneader('number:' + str(int(3 * a + 2 * b)) , '' , 'a:' + str(int(a)) , '' , 'b:' + str(int(b)))
+st.subheader('number:' + str(int(3 * a + 2 * b)) , '' , 'a:' + str(int(a)) , '' , 'b:' + str(int(b)))
 st.subheader('gcd:' + str(math.gcd(int(a) , int(b))) , '' * 2 , 'a.mod:' + str(int(a % 2)) , '' , 'b.mod:' + str(int(b % 3)))
