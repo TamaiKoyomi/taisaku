@@ -24,6 +24,6 @@ x = factorize(3 * a + 2 * b)
 if math.gcd(int(a) , int(b)) != 1 or a != 0 and a % 2 == 0 or b != 0 and b % 3 == 0 or a % 5 == b % 5 and a != 1 and b != 1:
     x = False
 
-st.write('factorize:' + str(x))
-st.write('number:' + str(int(3 * a + 2 * b)) , '' , 'a:' + str(int(a)) , '' , 'b:' + str(int(b)))
-st.write('gcd:' + str(math.gcd(int(a) , int(b))) , '' * 2 , 'a.mod:' + str(int(a % 2)) , '' , 'b.mod:' + str(int(b % 3)))
+st.subheader('factorize:' + str(x))
+st.subneader('number:' + str(int(3 * a + 2 * b)) , '' , 'a:' + str(int(a)) , '' , 'b:' + str(int(b)))
+st.subheader('gcd:' + str(math.gcd(int(a) , int(b))) , '' * 2 , 'a.mod:' + str(int(a % 2)) , '' , 'b.mod:' + str(int(b % 3)))
