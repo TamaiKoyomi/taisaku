@@ -1,41 +1,29 @@
 import streamlit as st
-import pandas as pd
-import numpy as np
+import math
 
-st.title('期末テスト対策問題')
+#素数判定
+def factorize(n):
+    c = 0
 
-# Load the data
-@st.cache
-def load_data():
-    return pd.read_excel("期末.xlsx")
+    for i in range(2 , int(n ** 0.5) + 1):
+        if n % i == 0:
+            return 'False ' + str(i)
+            c = 1
+            break
+        if c == 0:
+            return True
 
-words_df = load_data()
+st.title('そすー')
+a = st.number_input('aの値を入力してください')
+b = st.number_input('bの値を入力してください')
 
-st.write('家庭科、保健、歴史総合、生物の4教科からランダムで出題します。')
+#素数ならTrue,合成数ならFalseを返す
+x = factorize(3 * a + 2 * b)
 
-if st.button('問題を見る'):
-    rarity_probs = {
-        '家庭科': 0.1,
-        '保健': 0.1,
-        '歴史総合': 0.1,
-        '生物': 0.1
-    }
-    chosen_rarity = np.random.choice(list(rarity_probs.keys()), p=list(rarity_probs.values()))
+#a,bの条件の確認および例外処理
+if math.gcd(a , b) != 1 or a != 0 and a % 2 == 0 or b != 0 and b % 3 == 0 or a % 5 == b % 5 and a != 1 and b != 1:
+    x = False
 
-    subset_df = words_df[words_df['教科'] == chosen_rarity]
-    selected_word = subset_df.sample().iloc[0]
-    
-    # セッションステートに選択された単語を保存
-    st.session_state.selected_word = selected_word
-    st.session_state.display_meaning = False
-
-if 'selected_word' in st.session_state:
-    st.header(f"教科: {st.session_state.selected_word['教科']}")
-    st.write(f"問題: {st.session_state.selected_word['問題']}")
-
-    # 意味を確認するボタンを追加
-    if st.button('答えを確認する'):
-        st.session_state.display_meaning = True
-
-    if st.session_state.display_meaning:
-        st.write(f"答え: {st.session_state.selected_word['解答']}")
+st.write('factorize:' + str(x))
+st.write('number:' + str(3 * a + 2 * b) , '' , 'a:' + str(a) , '' , 'b:' + str(b))
+st.write('gcd:' + str(math.gcd(a , b)) , '' * 2 , 'a.mod:' + str(a % 2) , '' , 'b.mod:' + str(b % 3))
