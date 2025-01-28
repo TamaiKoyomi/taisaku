@@ -14,8 +14,8 @@ def factorize(n):
             return True
 
 st.title('そすー')
-a = st.number_input('a' , value = int , placeholder = "aの値を入力してください")
-b = st.number_input('b' , value = int , placeholder = 'bの値を入力してください')
+a = int(st.number_input('a' , placeholder = "aの値を入力してください"))
+b = st.number_input('b' , placeholder = 'bの値を入力してください')
 
 #素数ならTrue,合成数ならFalseを返す
 x = factorize(3 * a + 2 * b)
