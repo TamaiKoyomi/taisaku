@@ -20,12 +20,10 @@ b = st.number_input('b' , placeholder = 'bの値を入力してください')
 #素数ならTrue,合成数ならFalseを返す
 x = factorize(3 * a + 2 * b)
 
-st.write(math.gcd(int(a) , int(b)))
 
-#a,bの条件の確認および例外処理
-#if math.gcd(a , b) != 1 or a != 0 and a % 2 == 0 or b != 0 and b % 3 == 0 or a % 5 == b % 5 and a != 1 and b != 1:
-#    x = False
+if math.gcd(a , b) != 1 or a != 0 and a % 2 == 0 or b != 0 and b % 3 == 0 or a % 5 == b % 5 and a != 1 and b != 1:
+    x = False
 
-'''st.write('factorize:' + str(x))
+st.write('factorize:' + str(x))
 st.write('number:' + str(3 * a + 2 * b) , '' , 'a:' + str(a) , '' , 'b:' + str(b))
-st.write('gcd:' + str(math.gcd(a , b)) , '' * 2 , 'a.mod:' + str(a % 2) , '' , 'b.mod:' + str(b % 3))'''
+st.write('gcd:' + str(math.gcd(a , b)) , '' * 2 , 'a.mod:' + str(a % 2) , '' , 'b.mod:' + str(b % 3))
