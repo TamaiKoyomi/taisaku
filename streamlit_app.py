@@ -25,5 +25,5 @@ if math.gcd(int(a) , int(b)) != 1 or a != 0 and a % 2 == 0 or b != 0 and b % 3 =
     x = False
 
 st.write('factorize:' + str(x))
-st.write('number:' + str(3 * a + 2 * b) , '' , 'a:' + str(a) , '' , 'b:' + str(b))
-st.write('gcd:' + str(math.gcd(int(a) , int(b))) , '' * 2 , 'a.mod:' + str(a % 2) , '' , 'b.mod:' + str(b % 3))
+st.write('number:' + str(int(3 * a + 2 * b)) , '' , 'a:' + str(int(a)) , '' , 'b:' + str(int(b)))
+st.write('gcd:' + str(math.gcd(int(a) , int(b))) , '' * 2 , 'a.mod:' + str(int(a % 2)) , '' , 'b.mod:' + str(int(b % 3)))
