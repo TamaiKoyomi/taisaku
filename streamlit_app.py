@@ -14,13 +14,13 @@ def factorize(n):
             return True
 
 st.title('そすー')
-a = st.number_input('aの値を入力してください')
-b = st.number_input('bの値を入力してください')
+a = st.number_input('a' , value = int , placeholder = "aの値を入力してください")
+b = st.number_input('b' , value = int , placeholder = 'bの値を入力してください')
 
 #素数ならTrue,合成数ならFalseを返す
 x = factorize(3 * a + 2 * b)
 
-st.write(str(math.gcd(a , b)))
+st.write(math.gcd(a , b))
 
 #a,bの条件の確認および例外処理
 #if math.gcd(a , b) != 1 or a != 0 and a % 2 == 0 or b != 0 and b % 3 == 0 or a % 5 == b % 5 and a != 1 and b != 1:
